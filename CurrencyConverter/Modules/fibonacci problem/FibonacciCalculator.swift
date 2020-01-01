@@ -25,6 +25,10 @@ final class FibonacciCalculator {
         }
     }
 
+    /// calculate the fibonacci of any number
+    ///
+    /// - Parameter number: positive digit to calculate
+    /// - Returns: return dicionary with all values
     private func fibonacciIteratively(of number: UInt) -> [Int: UInt] {
         var fibsList: [Int: UInt] = [:]
 
@@ -44,13 +48,14 @@ final class FibonacciCalculator {
         return fibsList
     }
 
+    /// calculate the fibonacci of any number, it will overflow if the number is too large
     private func fibonacciRecursivly(of number: Int) throws -> UInt {
         /// base
         guard number != 0, number != 1 else {
             fibMemoList[number] = UInt(number)
             return UInt(number)
         }
-        // calculated Before
+        /// calculated Before
         if let value2 = fibMemoList[number - 1] {
             if let value1 = fibMemoList[number - 2] {
                 let value = value2.addingReportingOverflow(value1)
@@ -62,7 +67,7 @@ final class FibonacciCalculator {
                 }
             }
         }
-        // calculate New
+        /// calculate
         guard let value = try? fibonacciRecursivly(of: number - 1).addingReportingOverflow(fibonacciRecursivly(of: number - 2)) else {
             throw Err.overflow
         }
