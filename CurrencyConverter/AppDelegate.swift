@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    private func setInitView() {
+    private final func setInitView() {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = CurrencySelectorViewController()
         window?.makeKeyAndVisible()
