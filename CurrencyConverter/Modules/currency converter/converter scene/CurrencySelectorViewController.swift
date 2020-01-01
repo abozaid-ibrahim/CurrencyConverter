@@ -18,18 +18,19 @@ final class CurrencySelectorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableVeiw()
+        bindToViewModel()
+        viewModel.loadCurrencyOf(cur: "EUR")
+    }
+
+    private func bindToViewModel() {
+        viewModel.currenciesList
+            .bind(to: tableView.rx.items(cellIdentifier: CurrencyTableCell.id, cellType: CurrencyTableCell.self)) { row, element, cell in
+                cell.setData(value: "\(element.key): \(element.value)")
+            }
+            .disposed(by: disposeBag)
     }
 
     private func setupTableVeiw() {
         tableView.register(UINib(nibName: CurrencyTableCell.id, bundle: .none), forCellReuseIdentifier: CurrencyTableCell.id)
-
-        let items = Observable.just(
-            (0 ..< 20).map { "\($0)" }
-        )
-        items
-            .bind(to: tableView.rx.items(cellIdentifier: CurrencyTableCell.id, cellType: CurrencyTableCell.self)) { row, element, cell in
-                cell.setData(value: "\(element) @ row \(row)")
-            }
-            .disposed(by: disposeBag)
     }
 }

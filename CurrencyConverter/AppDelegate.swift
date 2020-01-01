@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private final func setInitView() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = CurrencySelectorViewController()
+        let vc = CurrencySelectorViewController()
+        vc.viewModel = CurrencySelectorListViewModel()
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
 }

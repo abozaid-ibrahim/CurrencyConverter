@@ -8,16 +8,20 @@
 
 import Foundation
 
-enum CategoryApi {
+enum CurrencySelectorApi {
     case latest(currency: String)
 }
 
-extension CategoryApi: RequestBuilder {
+extension CurrencySelectorApi: RequestBuilder {
+    var path: String {
+        return "latest"
+    }
+
     var parameters: [String: Any] {
         switch self {
         case let .latest(currency):
             return ["base": currency,
-                    "api_key": APIConstants.apiKey,
+                    "access_key": APIConstants.accessKey,
                     "format": "1",
             ]
         }

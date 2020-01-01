@@ -10,9 +10,8 @@ import Foundation
 
 public protocol RequestBuilder {
     var baseURL: String { get }
-
     var method: HttpMethod { get }
-
+    var path: String { get }
     var parameters: [String: Any] { get }
     var task: URLRequest { get }
 }
@@ -23,11 +22,11 @@ public enum HttpMethod: String {
 
 extension RequestBuilder {
     var description: String {
-        return "\(endpoint), \(parameters)"
+        return "endpoint: \(endpoint),params: \(parameters)"
     }
 
     var endpoint: URL {
-        return URL(string: "\(baseURL)")!
+        return URL(string: "\(baseURL)\(path)")!
     }
 
     var baseURL: String {
@@ -41,6 +40,7 @@ extension RequestBuilder {
             items.append(URLQueryItem(name: key, value: "\(value)"))
         }
         myURL?.queryItems = items
+        log(.info, myURL!.url!)
         var request = URLRequest(url: myURL!.url!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 30)
         request.httpMethod = method.rawValue
         return request
