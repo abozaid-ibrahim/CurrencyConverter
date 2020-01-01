@@ -24,6 +24,8 @@
 		6C8EE19E23BCDBF700C23BBF /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560EE23BCD93E00270165 /* RequestBuilder.swift */; };
 		6C8EE19F23BCDC0000C23BBF /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560F323BCDA4100270165 /* BundleExtension.swift */; };
 		6C8EE1A023BCDC0000C23BBF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560F423BCDA4100270165 /* Logger.swift */; };
+		6C8EE1A223BCDC6000C23BBF /* FibonacciCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8EE1A123BCDC6000C23BBF /* FibonacciCalculator.swift */; };
+		6C8EE1A423BCDEC400C23BBF /* FibonacciTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */; };
 		A10987EC3252E2CA8AA2BABD /* Pods_CurrencyConverterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BD6DF8D43278F9887CECB8 /* Pods_CurrencyConverterTests.framework */; };
 		B942517E3596120BD1742308 /* Pods_CurrencyConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6112D99553CB466D81077064 /* Pods_CurrencyConverter.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		6C50AE5723BCB6080078AA34 /* CurrencySelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectorViewController.swift; sourceTree = "<group>"; };
 		6C50AE5823BCB6080078AA34 /* CurrencySelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencySelectorViewController.xib; sourceTree = "<group>"; };
 		6C50AE5B23BCB8C80078AA34 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6C8EE1A123BCDC6000C23BBF /* FibonacciCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCalculator.swift; sourceTree = "<group>"; };
+		6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciTests.swift; sourceTree = "<group>"; };
 		A311CB9BEED43BA7F87EB4B2 /* Pods-CurrencyConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConverter.release.xcconfig"; path = "Target Support Files/Pods-CurrencyConverter/Pods-CurrencyConverter.release.xcconfig"; sourceTree = "<group>"; };
 		AFF49CC754B3809F34233195 /* Pods-CurrencyConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConverter.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyConverter/Pods-CurrencyConverter.debug.xcconfig"; sourceTree = "<group>"; };
 		F5D65E0D00897C3D2145588D /* Pods-CurrencyConverterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConverterTests.release.xcconfig"; path = "Target Support Files/Pods-CurrencyConverterTests/Pods-CurrencyConverterTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			children = (
 				6C50AE4423BBFFF70078AA34 /* CurrencyConverterTests.swift */,
 				6C50AE4623BBFFF70078AA34 /* Info.plist */,
+				6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */,
 			);
 			path = CurrencyConverterTests;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 		6C50AE5123BCB2A00078AA34 /* fibonacci problem */ = {
 			isa = PBXGroup;
 			children = (
+				6C8EE1A123BCDC6000C23BBF /* FibonacciCalculator.swift */,
 			);
 			path = "fibonacci problem";
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C8EE1A223BCDC6000C23BBF /* FibonacciCalculator.swift in Sources */,
 				6C50AE3023BBFFF50078AA34 /* AppDelegate.swift in Sources */,
 				6C8EE19C23BCDBF700C23BBF /* NetworkError.swift in Sources */,
 				6C50AE5623BCB59B0078AA34 /* CurrencySelectorResponse.swift in Sources */,
@@ -431,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C8EE1A423BCDEC400C23BBF /* FibonacciTests.swift in Sources */,
 				6C50AE4523BBFFF70078AA34 /* CurrencyConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
