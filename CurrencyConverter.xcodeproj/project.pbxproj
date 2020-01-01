@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6C50AE3023BBFFF50078AA34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50AE2F23BBFFF50078AA34 /* AppDelegate.swift */; };
-		6C50AE3223BBFFF50078AA34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50AE3123BBFFF50078AA34 /* ViewController.swift */; };
-		6C50AE3523BBFFF50078AA34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C50AE3323BBFFF50078AA34 /* Main.storyboard */; };
 		6C50AE3723BBFFF60078AA34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C50AE3623BBFFF60078AA34 /* Assets.xcassets */; };
 		6C50AE3A23BBFFF60078AA34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C50AE3823BBFFF60078AA34 /* LaunchScreen.storyboard */; };
 		6C50AE4523BBFFF70078AA34 /* CurrencyConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50AE4423BBFFF70078AA34 /* CurrencyConverterTests.swift */; };
+		6C50AE5623BCB59B0078AA34 /* CurrencySelectorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50AE5523BCB59B0078AA34 /* CurrencySelectorResponse.swift */; };
+		6C50AE5923BCB6080078AA34 /* CurrencySelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50AE5723BCB6080078AA34 /* CurrencySelectorViewController.swift */; };
+		6C50AE5A23BCB6080078AA34 /* CurrencySelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C50AE5823BCB6080078AA34 /* CurrencySelectorViewController.xib */; };
+		6C50AE5C23BCB8C80078AA34 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6C50AE5B23BCB8C80078AA34 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +30,16 @@
 /* Begin PBXFileReference section */
 		6C50AE2C23BBFFF50078AA34 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C50AE2F23BBFFF50078AA34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6C50AE3123BBFFF50078AA34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6C50AE3423BBFFF50078AA34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C50AE3623BBFFF60078AA34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C50AE3923BBFFF60078AA34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C50AE3B23BBFFF60078AA34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C50AE4023BBFFF70078AA34 /* CurrencyConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C50AE4423BBFFF70078AA34 /* CurrencyConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterTests.swift; sourceTree = "<group>"; };
 		6C50AE4623BBFFF70078AA34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C50AE5523BCB59B0078AA34 /* CurrencySelectorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectorResponse.swift; sourceTree = "<group>"; };
+		6C50AE5723BCB6080078AA34 /* CurrencySelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectorViewController.swift; sourceTree = "<group>"; };
+		6C50AE5823BCB6080078AA34 /* CurrencySelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencySelectorViewController.xib; sourceTree = "<group>"; };
+		6C50AE5B23BCB8C80078AA34 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C0560EB23BCB9B100270165 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6C50AE5323BCB2BB0078AA34 /* network Module */,
+				6C50AE5223BCB2A70078AA34 /* currency converter */,
+				6C50AE5123BCB2A00078AA34 /* fibonacci problem */,
+				6C50AE5023BCB2950078AA34 /* arthmatic problem */,
+				6C50AE4F23BCB28C0078AA34 /* anagrams problem */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		6C50AE2323BBFFF50078AA34 = {
 			isa = PBXGroup;
 			children = (
+				6C50AE5B23BCB8C80078AA34 /* README.md */,
 				6C50AE2E23BBFFF50078AA34 /* CurrencyConverter */,
 				6C50AE4323BBFFF70078AA34 /* CurrencyConverterTests */,
 				6C50AE2D23BBFFF50078AA34 /* Products */,
@@ -77,9 +94,8 @@
 		6C50AE2E23BBFFF50078AA34 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				6C0560EB23BCB9B100270165 /* Modules */,
 				6C50AE2F23BBFFF50078AA34 /* AppDelegate.swift */,
-				6C50AE3123BBFFF50078AA34 /* ViewController.swift */,
-				6C50AE3323BBFFF50078AA34 /* Main.storyboard */,
 				6C50AE3623BBFFF60078AA34 /* Assets.xcassets */,
 				6C50AE3823BBFFF60078AA34 /* LaunchScreen.storyboard */,
 				6C50AE3B23BBFFF60078AA34 /* Info.plist */,
@@ -94,6 +110,52 @@
 				6C50AE4623BBFFF70078AA34 /* Info.plist */,
 			);
 			path = CurrencyConverterTests;
+			sourceTree = "<group>";
+		};
+		6C50AE4F23BCB28C0078AA34 /* anagrams problem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "anagrams problem";
+			sourceTree = "<group>";
+		};
+		6C50AE5023BCB2950078AA34 /* arthmatic problem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "arthmatic problem";
+			sourceTree = "<group>";
+		};
+		6C50AE5123BCB2A00078AA34 /* fibonacci problem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "fibonacci problem";
+			sourceTree = "<group>";
+		};
+		6C50AE5223BCB2A70078AA34 /* currency converter */ = {
+			isa = PBXGroup;
+			children = (
+				6C50AE5423BCB5790078AA34 /* converter scene */,
+			);
+			path = "currency converter";
+			sourceTree = "<group>";
+		};
+		6C50AE5323BCB2BB0078AA34 /* network Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "network Module";
+			sourceTree = "<group>";
+		};
+		6C50AE5423BCB5790078AA34 /* converter scene */ = {
+			isa = PBXGroup;
+			children = (
+				6C50AE5523BCB59B0078AA34 /* CurrencySelectorResponse.swift */,
+				6C50AE5723BCB6080078AA34 /* CurrencySelectorViewController.swift */,
+				6C50AE5823BCB6080078AA34 /* CurrencySelectorViewController.xib */,
+			);
+			path = "converter scene";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C50AE3A23BBFFF60078AA34 /* LaunchScreen.storyboard in Resources */,
+				6C50AE5A23BCB6080078AA34 /* CurrencySelectorViewController.xib in Resources */,
+				6C50AE5C23BCB8C80078AA34 /* README.md in Resources */,
 				6C50AE3723BBFFF60078AA34 /* Assets.xcassets in Resources */,
-				6C50AE3523BBFFF50078AA34 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C50AE3223BBFFF50078AA34 /* ViewController.swift in Sources */,
 				6C50AE3023BBFFF50078AA34 /* AppDelegate.swift in Sources */,
+				6C50AE5623BCB59B0078AA34 /* CurrencySelectorResponse.swift in Sources */,
+				6C50AE5923BCB6080078AA34 /* CurrencySelectorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +285,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6C50AE3323BBFFF50078AA34 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C50AE3423BBFFF50078AA34 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6C50AE3823BBFFF60078AA34 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
