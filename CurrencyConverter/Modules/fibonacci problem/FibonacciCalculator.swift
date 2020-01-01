@@ -7,30 +7,41 @@
 //
 
 import Foundation
+
 final class FibonacciCalculator {
     private var fibMemoList: [Int: UInt] = [:]
 
-    func getFibonacci(of number: Int, callback: @escaping ([Int: UInt]) -> Void) {
+    func getFibonacci(of number: UInt, type: CalculationType, callback: @escaping ([Int: UInt]) -> Void) {
         // TODO: Use NSThread to change stack size and accept bigger numbers
         DispatchQueue.global().sync { [weak self] in
             guard let self = self else { return }
-            _ = try? self.fibonacciRecursivly(of: number)
-            callback(self.fibMemoList)
+            if type == .recurse {
+                _ = try? self.fibonacciRecursivly(of: Int(number))
+                callback(self.fibMemoList)
+            } else {
+                let fib = self.fibonacciIteratively(of: number)
+                callback(fib)
+            }
         }
     }
 
-    private func fibonacciIteratively(of number: UInt) -> UInt {
-        guard number > 1 else {
-            return number
-        }
-        var fib: UInt = 0
+    private func fibonacciIteratively(of number: UInt) -> [Int: UInt] {
+        var fibsList: [Int: UInt] = [:]
+
+        fibsList[0] = 0
+        var fib: UInt = 0 // 0
         var prev: UInt = 1 //
-        for _ in 2 ... number {
+
+        var item = 1
+        while item <= number {
             let tempPrev = fib
             fib = prev + fib
             prev = tempPrev
+            fibsList[Int(item)] = fib
+            item += 1
         }
-        return fib
+
+        return fibsList
     }
 
     private func fibonacciRecursivly(of number: Int) throws -> UInt {
@@ -67,4 +78,8 @@ final class FibonacciCalculator {
 
 enum Err: Error {
     case overflow
+}
+
+enum CalculationType {
+    case iterative, recurse
 }
