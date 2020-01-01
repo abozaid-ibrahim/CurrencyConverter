@@ -48,7 +48,7 @@ class FibonacciTests: XCTestCase {
             XCTAssertEqual(fibonacciList[1], 1)
             twoIterativeExp.fulfill()
         })
-        wait(for: [twoElementExpectation, twoIterativeExp], timeout: 0.5)
+        wait(for: [twoElementExpectation, twoIterativeExp], timeout: 0.1)
     }
 
     func testValidFibonacci() {
@@ -65,6 +65,6 @@ class FibonacciTests: XCTestCase {
             XCTAssertEqual(fibonacciList[10], 55)
             raandomIterativeExp.fulfill()
         })
-        wait(for: [randomElementExpectation, raandomIterativeExp], timeout: 5.0)
+        wait(for: [randomElementExpectation, raandomIterativeExp], timeout: 3.0)
     }
 }
