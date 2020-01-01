@@ -19,7 +19,20 @@ final class FibonacciCalculator {
         }
     }
 
-    
+    private func fibonacciIteratively(of number: UInt) -> UInt {
+        guard number > 1 else {
+            return number
+        }
+        var fib: UInt = 0
+        var prev: UInt = 1 //
+        for _ in 2 ... number {
+            let tempPrev = fib
+            fib = prev + fib
+            prev = tempPrev
+        }
+        return fib
+    }
+
     private func fibonacciRecursivly(of number: Int) throws -> UInt {
         /// base
         guard number != 0, number != 1 else {
