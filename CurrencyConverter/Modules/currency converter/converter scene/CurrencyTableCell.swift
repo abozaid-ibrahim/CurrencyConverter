@@ -11,8 +11,11 @@ import UIKit
 final class CurrencyTableCell: UITableViewCell {
     static let id = "CurrencyTableCell"
     @IBOutlet private var currencyLbl: UILabel!
-    func setData(value: String) {
-        currencyLbl.text = value
+    @IBOutlet private var valueLbl: UILabel!
+
+    func setData(currency: String, value: String) {
+        currencyLbl.text = currency
+        valueLbl.text = value
     }
 
     override func awakeFromNib() {

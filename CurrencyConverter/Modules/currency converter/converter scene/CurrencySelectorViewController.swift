@@ -24,8 +24,8 @@ final class CurrencySelectorViewController: UIViewController {
 
     private func bindToViewModel() {
         viewModel.currenciesList
-            .bind(to: tableView.rx.items(cellIdentifier: CurrencyTableCell.id, cellType: CurrencyTableCell.self)) { row, element, cell in
-                cell.setData(value: "\(element.key): \(element.value)")
+            .bind(to: tableView.rx.items(cellIdentifier: CurrencyTableCell.id, cellType: CurrencyTableCell.self)) { _, element, cell in
+                cell.setData(currency: element.key, value: element.value)
             }
             .disposed(by: disposeBag)
     }
