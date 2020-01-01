@@ -66,6 +66,5 @@ This is to group every component's extension / reusable functions / wrappers of 
  
  ## Improvements
 
- * add staging environment
- * cach the images 
+ * add staging,production environment
  * reach 100% code coverage
