@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,6 +33,14 @@
 		42BD6DF8D43278F9887CECB8 /* Pods_CurrencyConverterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyConverterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A3885DDB7CCA328B6BBF80 /* Pods-CurrencyConverterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConverterTests.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyConverterTests/Pods-CurrencyConverterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6112D99553CB466D81077064 /* Pods_CurrencyConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0560EC23BCD93E00270165 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		6C0560ED23BCD93E00270165 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		6C0560EE23BCD93E00270165 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		6C0560EF23BCD93E00270165 /* Pageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pageable.swift; sourceTree = "<group>"; };
+		6C0560F023BCD93E00270165 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		6C0560F123BCD93E00270165 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		6C0560F323BCDA4100270165 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		6C0560F423BCDA4100270165 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		6C50AE2C23BBFFF50078AA34 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C50AE2F23BBFFF50078AA34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C50AE3623BBFFF60078AA34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +99,15 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		6C0560F223BCD98100270165 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6C0560F323BCDA4100270165 /* BundleExtension.swift */,
+				6C0560F423BCDA4100270165 /* Logger.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6C50AE2323BBFFF50078AA34 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +132,7 @@
 		6C50AE2E23BBFFF50078AA34 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				6C0560F223BCD98100270165 /* Extensions */,
 				6C0560EB23BCB9B100270165 /* Modules */,
 				6C50AE2F23BBFFF50078AA34 /* AppDelegate.swift */,
 				6C50AE3623BBFFF60078AA34 /* Assets.xcassets */,
@@ -165,6 +183,12 @@
 		6C50AE5323BCB2BB0078AA34 /* network Module */ = {
 			isa = PBXGroup;
 			children = (
+				6C0560EC23BCD93E00270165 /* APIClient.swift */,
+				6C0560F023BCD93E00270165 /* APIConstants.swift */,
+				6C0560F123BCD93E00270165 /* ImageDownloader.swift */,
+				6C0560ED23BCD93E00270165 /* NetworkError.swift */,
+				6C0560EF23BCD93E00270165 /* Pageable.swift */,
+				6C0560EE23BCD93E00270165 /* RequestBuilder.swift */,
 			);
 			path = "network Module";
 			sourceTree = "<group>";
@@ -187,7 +211,6 @@
 				51A3885DDB7CCA328B6BBF80 /* Pods-CurrencyConverterTests.debug.xcconfig */,
 				F5D65E0D00897C3D2145588D /* Pods-CurrencyConverterTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
