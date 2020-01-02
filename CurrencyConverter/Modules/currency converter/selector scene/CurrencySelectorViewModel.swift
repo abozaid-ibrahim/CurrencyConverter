@@ -10,18 +10,19 @@ import Foundation
 import RxSwift
 protocol CurrencySelectorViewModel {
     var showProgress: Observable<Bool> { get }
-    var currenciesList: Observable<[String: String]> { get }
+    var currenciesList: Observable<CurrencyModel> { get }
     var error: Observable<Error> { get }
     func loadCurrencyOf(cur: String)
 }
 
+typealias CurrencyModel = [String: String]
 struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
     private let apiClient: ApiClient
 
     // MARK: private state
 
     private let disposeBag = DisposeBag()
-    private let _categories = PublishSubject<[String: String]>()
+    private let _categories = PublishSubject<CurrencyModel>()
     private let _showProgress = PublishSubject<Bool>()
     private let _error = PublishSubject<Error>()
 
@@ -31,7 +32,7 @@ struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
         return _showProgress.asObservable()
     }
 
-    var currenciesList: Observable<[String: String]> {
+    var currenciesList: Observable<CurrencyModel> {
         return _categories.asObservable()
     }
 
@@ -45,7 +46,7 @@ struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
 
     func loadCurrencyOf(cur: String) {
         _showProgress.onNext(true)
-        let api = CurrencySelectorApi.latest(currency: "EUR")
+        let api = CurrencySelectorApi.latest(currency: cur)
         apiClient.getData(of: api) { result in
             switch result {
             case let .success(data):
@@ -64,7 +65,7 @@ struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let model = try decoder.decode(CurrencySelectorResponse.self, from: data)
-            let valu = model.rates.mapValues{String($0)}
+            let valu = model.rates.mapValues { String($0) }
             _categories.onNext(valu)
         } catch {
             log(.error, error)

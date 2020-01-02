@@ -198,7 +198,8 @@
 		6C50AE5223BCB2A70078AA34 /* currency converter */ = {
 			isa = PBXGroup;
 			children = (
-				6C50AE5423BCB5790078AA34 /* converter scene */,
+				6C62493B23BD0CDA00C5D0BC /* calculator scene */,
+				6C50AE5423BCB5790078AA34 /* selector scene */,
 			);
 			path = "currency converter";
 			sourceTree = "<group>";
@@ -215,7 +216,7 @@
 			path = "network module";
 			sourceTree = "<group>";
 		};
-		6C50AE5423BCB5790078AA34 /* converter scene */ = {
+		6C50AE5423BCB5790078AA34 /* selector scene */ = {
 			isa = PBXGroup;
 			children = (
 				6C50AE5523BCB59B0078AA34 /* CurrencySelectorResponse.swift */,
@@ -226,7 +227,14 @@
 				6C62493623BCEDFA00C5D0BC /* CurrencyTableCell.xib */,
 				6C62493923BCEF4800C5D0BC /* CurrencySelectorViewModel.swift */,
 			);
-			path = "converter scene";
+			path = "selector scene";
+			sourceTree = "<group>";
+		};
+		6C62493B23BD0CDA00C5D0BC /* calculator scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "calculator scene";
 			sourceTree = "<group>";
 		};
 		A0124B996AD179A9D3308222 /* Pods */ = {

@@ -20,19 +20,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xyi-dN-JtN">
-                    <rect key="frame" x="0.0" y="20" width="414" height="842"/>
+                    <rect key="frame" x="0.0" y="12" width="414" height="850"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="xyi-dN-JtN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" symbolic="YES" id="7XF-cs-PrS"/>
+                <constraint firstItem="xyi-dN-JtN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="DHd-f2-yUo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xyi-dN-JtN" secondAttribute="trailing" id="Tf4-Fx-9eU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xyi-dN-JtN" secondAttribute="bottom" id="Yg7-ru-o9N"/>
                 <constraint firstItem="xyi-dN-JtN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ypf-uh-bZq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
 </document>
