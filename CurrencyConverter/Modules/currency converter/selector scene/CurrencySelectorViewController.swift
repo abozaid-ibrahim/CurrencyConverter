@@ -36,7 +36,8 @@ final class CurrencySelectorViewController: UIViewController {
             .disposed(by: disposeBag)
         tableView.rx.modelSelected((String, String).self).subscribe(onNext: { [unowned self] value in
             self.title = value.0
-            self.viewModel.loadCurrencyOf(cur: value.0)
+//            self.viewModel.loadCurrencyOf(cur: value.0)
+            try! AppNavigator().push(.currencyCalculator(base: value.0, value: Float(value.1)!))
         }).disposed(by: disposeBag)
     }
 

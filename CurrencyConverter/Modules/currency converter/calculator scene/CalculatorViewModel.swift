@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 protocol CalculatorViewModel {
-    var currencyValue: Observable<String> { get }
+    var totalValue: Observable<String> { get }
     func calculateCurrencyValue(of: Float)
 }
 
@@ -18,15 +18,21 @@ struct CalculatorFormViewModel: CalculatorViewModel {
     // MARK: private state
 
     private let disposeBag = DisposeBag()
-    private let _currencyValue = BehaviorSubject<String>(value: "1")
+    private let _totalValue = PublishSubject<String>()
+    private let currency: Float
 
     // MARK: Observers
 
-    var currencyValue: Observable<String> {
-        return _currencyValue.asObservable()
+    var totalValue: Observable<String> {
+        return _totalValue.asObservable()
     }
 
-    func calculateCurrencyValue(of: Float) {
-        _currencyValue.onNext("22")
+    init(base: String, value: Float) {
+        currency = value
+    }
+
+    func calculateCurrencyValue(of amount: Float) {
+        let sum = amount * currency
+        _totalValue.onNext(String(sum))
     }
 }

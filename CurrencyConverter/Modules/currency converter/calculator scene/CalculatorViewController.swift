@@ -11,18 +11,20 @@ import RxOptional
 import RxSwift
 import UIKit
 
-class CalculatorViewController: UIViewController {
+final class CalculatorViewController: UIViewController {
     private let disposeBag = DisposeBag()
-    private var viewModel: CalculatorViewModel!
-    
     @IBOutlet private var currencyLbl: UILabel!
     @IBOutlet private var baseTextField: UITextField!
 
+    var viewModel: CalculatorViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindToViewModel()
+    }
 
+    private func bindToViewModel() {
         baseTextField.rx.text
-            .debounce(.seconds(1), scheduler: MainScheduler.instance)
+            .debounce(.milliseconds(400), scheduler: MainScheduler.instance)
             .filterNil()
             .debug()
             .map { Float($0) }
@@ -30,7 +32,6 @@ class CalculatorViewController: UIViewController {
             .subscribe(onNext: { [unowned self] value in
                 self.viewModel.calculateCurrencyValue(of: value)
             }).disposed(by: disposeBag)
-
-        viewModel.currencyValue.bind(to: currencyLbl.rx.text).disposed(by: disposeBag)
+        viewModel.totalValue.bind(to: currencyLbl.rx.text).disposed(by: disposeBag)
     }
 }
