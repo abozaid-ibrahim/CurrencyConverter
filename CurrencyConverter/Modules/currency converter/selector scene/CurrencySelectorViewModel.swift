@@ -65,7 +65,7 @@ struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let model = try decoder.decode(CurrencySelectorResponse.self, from: data)
-            let valu = model.rates.mapValues { String($0) }
+            let valu = model.rates.mapValues { String(Float(round(100 * $0) / 100)) }
             _categories.onNext(valu)
         } catch {
             log(.error, error)
