@@ -20,6 +20,7 @@
 		6C62493723BCEDFA00C5D0BC /* CurrencyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62493523BCEDFA00C5D0BC /* CurrencyTableCell.swift */; };
 		6C62493823BCEDFA00C5D0BC /* CurrencyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C62493623BCEDFA00C5D0BC /* CurrencyTableCell.xib */; };
 		6C62493A23BCEF4800C5D0BC /* CurrencySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62493923BCEF4800C5D0BC /* CurrencySelectorViewModel.swift */; };
+		6C68F54623C0CFAC000D6F51 /* FreeLeaksModuelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C68F54523C0CFAB000D6F51 /* FreeLeaksModuelsTests.swift */; };
 		6C8EE19923BCDBF700C23BBF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560EC23BCD93E00270165 /* APIClient.swift */; };
 		6C8EE19A23BCDBF700C23BBF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560F023BCD93E00270165 /* APIConstants.swift */; };
 		6C8EE19C23BCDBF700C23BBF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560ED23BCD93E00270165 /* NetworkError.swift */; };
@@ -78,6 +79,7 @@
 		6C62493523BCEDFA00C5D0BC /* CurrencyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableCell.swift; sourceTree = "<group>"; };
 		6C62493623BCEDFA00C5D0BC /* CurrencyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableCell.xib; sourceTree = "<group>"; };
 		6C62493923BCEF4800C5D0BC /* CurrencySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectorViewModel.swift; sourceTree = "<group>"; };
+		6C68F54523C0CFAB000D6F51 /* FreeLeaksModuelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeLeaksModuelsTests.swift; sourceTree = "<group>"; };
 		6C8EE1A123BCDC6000C23BBF /* FibonacciCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCalculator.swift; sourceTree = "<group>"; };
 		6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciTests.swift; sourceTree = "<group>"; };
 		6CF02E3023BE35AF00878E37 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */,
 				6C50AE4423BBFFF70078AA34 /* AnagramsTests.swift */,
+				6C68F54523C0CFAB000D6F51 /* FreeLeaksModuelsTests.swift */,
 				6C50AE4623BBFFF70078AA34 /* Info.plist */,
 			);
 			path = CurrencyConverterTests;
@@ -494,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C68F54623C0CFAC000D6F51 /* FreeLeaksModuelsTests.swift in Sources */,
 				6C8EE1A423BCDEC400C23BBF /* FibonacciTests.swift in Sources */,
 				6C50AE4523BBFFF70078AA34 /* AnagramsTests.swift in Sources */,
 			);
