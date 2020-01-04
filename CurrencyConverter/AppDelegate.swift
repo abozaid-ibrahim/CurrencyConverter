@@ -13,17 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        setInitView()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        AppNavigator(window: window!)
         return true
     }
 
-    private final func setInitView() {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        let controller = CurrencySelectorViewController()
-        controller.viewModel = CurrencySelectorListViewModel()
-        let navigationController = UINavigationController(rootViewController: controller)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-    }
+//    private final func setInitView() {
+//        let controller = CurrencySelectorViewController()
+//        controller.viewModel = CurrencySelectorListViewModel()
+//        let navigationController = UINavigationController(rootViewController: controller)
+//        window?.rootViewController = navigationController
+//        window?.makeKeyAndVisible()
+//    }
 }

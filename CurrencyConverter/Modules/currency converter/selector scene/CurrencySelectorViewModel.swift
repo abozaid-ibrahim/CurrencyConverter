@@ -13,6 +13,7 @@ protocol CurrencySelectorViewModel {
     var currenciesList: Observable<CurrencyModel> { get }
     var error: Observable<Error> { get }
     func loadCurrencyOf(cur: String)
+    func itemSelected(of c: (String, String))
 }
 
 typealias CurrencyModel = [String: String]
@@ -25,6 +26,7 @@ struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
     private let _categories = PublishSubject<CurrencyModel>()
     private let _showProgress = PublishSubject<Bool>()
     private let _error = PublishSubject<Error>()
+    private let base = "EUR"
 
     // MARK: Observers
 
@@ -42,6 +44,10 @@ struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
 
     init(apiClient: ApiClient = HTTPClient()) {
         self.apiClient = apiClient
+    }
+
+    func itemSelected(of c: (String, String)) {
+        try! AppNavigator().push(.currencyCalculator(base: base, toCurrency: c.0, value: Float(c.1)!))
     }
 
     func loadCurrencyOf(cur: String) {
@@ -65,7 +71,7 @@ struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let model = try decoder.decode(CurrencySelectorResponse.self, from: data)
-            let valu = model.rates.mapValues { String($0) }
+            let valu = model.rates.mapValues { String(Float(round(100 * $0) / 100)) }
             _categories.onNext(valu)
         } catch {
             log(.error, error)

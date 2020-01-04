@@ -36,7 +36,8 @@ final class CurrencySelectorViewController: UIViewController {
             .disposed(by: disposeBag)
         tableView.rx.modelSelected((String, String).self).subscribe(onNext: { [unowned self] value in
             self.title = value.0
-            self.viewModel.loadCurrencyOf(cur: value.0)
+//            self.viewModel.loadCurrencyOf(cur: value.0)
+            self.viewModel.itemSelected(of: value)
         }).disposed(by: disposeBag)
     }
 
