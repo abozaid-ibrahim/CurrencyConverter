@@ -8,7 +8,7 @@
 
 @testable import CurrencyConverter
 import XCTest
-class FibonacciTests: XCTestCase {
+final class FibonacciTests: XCTestCase {
     var calculator: FibonacciCalculator!
 
     override func setUp() {

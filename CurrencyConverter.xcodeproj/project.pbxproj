@@ -181,9 +181,7 @@
 		6C50AE4323BBFFF70078AA34 /* CurrencyConverterTests */ = {
 			isa = PBXGroup;
 			children = (
-				6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */,
-				6C50AE4423BBFFF70078AA34 /* AnagramsTests.swift */,
-				6C68F54523C0CFAB000D6F51 /* FreeLeaksModuelsTests.swift */,
+				6C68F54723C0D112000D6F51 /* modules */,
 				6C50AE4623BBFFF70078AA34 /* Info.plist */,
 			);
 			path = CurrencyConverterTests;
@@ -258,6 +256,16 @@
 				6CF02E3D23BE634600878E37 /* CalculatorDestination.swift */,
 			);
 			path = "calculator scene";
+			sourceTree = "<group>";
+		};
+		6C68F54723C0D112000D6F51 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */,
+				6C50AE4423BBFFF70078AA34 /* AnagramsTests.swift */,
+				6C68F54523C0CFAB000D6F51 /* FreeLeaksModuelsTests.swift */,
+			);
+			path = modules;
 			sourceTree = "<group>";
 		};
 		6CF02E3623BE623100878E37 /* navigation */ = {

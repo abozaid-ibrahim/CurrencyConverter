@@ -9,7 +9,7 @@
 @testable import CurrencyConverter
 import XCTest
 
-class CurrencyConverterTests: XCTestCase {
+final class CurrencyConverterTests: XCTestCase {
     func testExample() {
         XCTAssertTrue("bad credit".isAnagram(to: "bad credit"))
     }
