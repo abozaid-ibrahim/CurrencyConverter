@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 extension Destination {
-    func getCurrencyCalculatorView(of base: String, value: Float) -> UIViewController {
+    func getCurrencyCalculatorView(of base: String, currency: String, value: Float) -> UIViewController {
         let controller = CalculatorViewController()
-        let viewModel = CalculatorFormViewModel(base: base, value: value)
+        let viewModel = CalculatorFormViewModel(base: base, currency: currency, value: value)
         controller.viewModel = viewModel
         return controller
     }

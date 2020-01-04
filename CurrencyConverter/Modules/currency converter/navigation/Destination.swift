@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 enum Destination {
     case currencySelector,
-        currencyCalculator(base: String, value: Float)
+        currencyCalculator(base: String, toCurrency: String, value: Float)
 
     func controller() -> UIViewController {
         switch self {
         case .currencySelector:
             return getSelectorView()
-        case let .currencyCalculator(base, value):
-            return getCurrencyCalculatorView(of: base, value: value)
+        case let .currencyCalculator(base, currency, value):
+            return getCurrencyCalculatorView(of: base, currency: currency, value: value)
         }
     }
 }
