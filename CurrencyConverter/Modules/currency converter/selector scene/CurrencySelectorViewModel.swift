@@ -19,10 +19,6 @@ protocol CurrencySelectorViewModel {
 
 typealias CurrencyModel = [String: String]
 final class CurrencySelectorListViewModel: CurrencySelectorViewModel {
-    var currenciesList: Observable<[String]> {
-        return _currencyValuesList.map { $0.map { $0.key } }
-    }
-
     private let apiClient: ApiClient
 
     // MARK: private state
@@ -31,11 +27,14 @@ final class CurrencySelectorListViewModel: CurrencySelectorViewModel {
     private let _currencyValuesList = PublishSubject<CurrencyModel>()
     private let _showProgress = PublishSubject<Bool>()
     private let _error = PublishSubject<Error>()
+    private var currencyValuesCach: [String: Float] = [:]
     private var base = ""
 
-    private var currencyValuesCach: [String: Float] = [:]
-
     // MARK: Observers
+
+    var currenciesList: Observable<[String]> {
+        return _currencyValuesList.map { $0.map { $0.key } }
+    }
 
     var showProgress: Observable<Bool> {
         return _showProgress.asObservable()
