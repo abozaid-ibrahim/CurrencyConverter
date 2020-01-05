@@ -29,7 +29,6 @@ final class CalculatorViewController: UIViewController {
         baseTextField.rx.text
             .debounce(.milliseconds(400), scheduler: MainScheduler.instance)
             .filterNil()
-            .debug()
             .map { Float($0) }
             .filterNil()
             .subscribe(onNext: { [unowned self] value in

@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -17,12 +17,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppNavigator(window: window!)
         return true
     }
-
-//    private final func setInitView() {
-//        let controller = CurrencySelectorViewController()
-//        controller.viewModel = CurrencySelectorListViewModel()
-//        let navigationController = UINavigationController(rootViewController: controller)
-//        window?.rootViewController = navigationController
-//        window?.makeKeyAndVisible()
-//    }
 }

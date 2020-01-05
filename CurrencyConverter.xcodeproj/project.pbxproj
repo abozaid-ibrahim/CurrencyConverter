@@ -21,6 +21,12 @@
 		6C62493823BCEDFA00C5D0BC /* CurrencyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C62493623BCEDFA00C5D0BC /* CurrencyTableCell.xib */; };
 		6C62493A23BCEF4800C5D0BC /* CurrencySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62493923BCEF4800C5D0BC /* CurrencySelectorViewModel.swift */; };
 		6C68F54623C0CFAC000D6F51 /* FreeLeaksModuelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C68F54523C0CFAB000D6F51 /* FreeLeaksModuelsTests.swift */; };
+		6C68F57823C1186A000D6F51 /* ArthmaticProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C68F57723C1186A000D6F51 /* ArthmaticProblem.swift */; };
+		6C68F58023C14E36000D6F51 /* DropdownTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C68F57E23C14E36000D6F51 /* DropdownTableCell.swift */; };
+		6C68F58123C14E37000D6F51 /* DropdownTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C68F57F23C14E36000D6F51 /* DropdownTableCell.xib */; };
+		6C68F58423C15852000D6F51 /* DropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C68F58223C15852000D6F51 /* DropdownViewController.swift */; };
+		6C68F58523C15852000D6F51 /* DropdownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C68F58323C15852000D6F51 /* DropdownViewController.xib */; };
+		6C68F58723C2062C000D6F51 /* TableView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C68F58623C2062C000D6F51 /* TableView+Cell.swift */; };
 		6C8EE19923BCDBF700C23BBF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560EC23BCD93E00270165 /* APIClient.swift */; };
 		6C8EE19A23BCDBF700C23BBF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560F023BCD93E00270165 /* APIConstants.swift */; };
 		6C8EE19C23BCDBF700C23BBF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560ED23BCD93E00270165 /* NetworkError.swift */; };
@@ -80,6 +86,12 @@
 		6C62493623BCEDFA00C5D0BC /* CurrencyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableCell.xib; sourceTree = "<group>"; };
 		6C62493923BCEF4800C5D0BC /* CurrencySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectorViewModel.swift; sourceTree = "<group>"; };
 		6C68F54523C0CFAB000D6F51 /* FreeLeaksModuelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeLeaksModuelsTests.swift; sourceTree = "<group>"; };
+		6C68F57723C1186A000D6F51 /* ArthmaticProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArthmaticProblem.swift; sourceTree = "<group>"; };
+		6C68F57E23C14E36000D6F51 /* DropdownTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTableCell.swift; sourceTree = "<group>"; };
+		6C68F57F23C14E36000D6F51 /* DropdownTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownTableCell.xib; sourceTree = "<group>"; };
+		6C68F58223C15852000D6F51 /* DropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewController.swift; sourceTree = "<group>"; };
+		6C68F58323C15852000D6F51 /* DropdownViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownViewController.xib; sourceTree = "<group>"; };
+		6C68F58623C2062C000D6F51 /* TableView+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Cell.swift"; sourceTree = "<group>"; };
 		6C8EE1A123BCDC6000C23BBF /* FibonacciCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCalculator.swift; sourceTree = "<group>"; };
 		6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciTests.swift; sourceTree = "<group>"; };
 		6CF02E3023BE35AF00878E37 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +138,7 @@
 		6C0560EB23BCB9B100270165 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6C68F57923C132BC000D6F51 /* dropdown menu */,
 				6C50AE5323BCB2BB0078AA34 /* network module */,
 				6C50AE5223BCB2A70078AA34 /* currency converter */,
 				6C50AE5123BCB2A00078AA34 /* fibonacci problem */,
@@ -140,6 +153,7 @@
 			children = (
 				6C0560F323BCDA4100270165 /* BundleExtension.swift */,
 				6C0560F423BCDA4100270165 /* Logger.swift */,
+				6C68F58623C2062C000D6F51 /* TableView+Cell.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,6 +212,7 @@
 		6C50AE5023BCB2950078AA34 /* arthmatic problem */ = {
 			isa = PBXGroup;
 			children = (
+				6C68F57723C1186A000D6F51 /* ArthmaticProblem.swift */,
 			);
 			path = "arthmatic problem";
 			sourceTree = "<group>";
@@ -266,6 +281,17 @@
 				6C68F54523C0CFAB000D6F51 /* FreeLeaksModuelsTests.swift */,
 			);
 			path = modules;
+			sourceTree = "<group>";
+		};
+		6C68F57923C132BC000D6F51 /* dropdown menu */ = {
+			isa = PBXGroup;
+			children = (
+				6C68F57E23C14E36000D6F51 /* DropdownTableCell.swift */,
+				6C68F57F23C14E36000D6F51 /* DropdownTableCell.xib */,
+				6C68F58223C15852000D6F51 /* DropdownViewController.swift */,
+				6C68F58323C15852000D6F51 /* DropdownViewController.xib */,
+			);
+			path = "dropdown menu";
 			sourceTree = "<group>";
 		};
 		6CF02E3623BE623100878E37 /* navigation */ = {
@@ -377,8 +403,10 @@
 				6C50AE3A23BBFFF60078AA34 /* LaunchScreen.storyboard in Resources */,
 				6C50AE5A23BCB6080078AA34 /* CurrencySelectorViewController.xib in Resources */,
 				6C50AE5C23BCB8C80078AA34 /* README.md in Resources */,
+				6C68F58123C14E37000D6F51 /* DropdownTableCell.xib in Resources */,
 				6CF02E3323BE35AF00878E37 /* CalculatorViewController.xib in Resources */,
 				6C50AE3723BBFFF60078AA34 /* Assets.xcassets in Resources */,
+				6C68F58523C15852000D6F51 /* DropdownViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,11 +505,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C68F58423C15852000D6F51 /* DropdownViewController.swift in Sources */,
 				6C8EE1A223BCDC6000C23BBF /* FibonacciCalculator.swift in Sources */,
 				6CF02E3C23BE630800878E37 /* Navigator.swift in Sources */,
 				6C62493423BCEBFD00C5D0BC /* StringAnagrams.swift in Sources */,
 				6CF02E3E23BE634600878E37 /* CalculatorDestination.swift in Sources */,
 				6CF02E3223BE35AF00878E37 /* CalculatorViewController.swift in Sources */,
+				6C68F57823C1186A000D6F51 /* ArthmaticProblem.swift in Sources */,
 				6C50AE3023BBFFF50078AA34 /* AppDelegate.swift in Sources */,
 				6C8EE19C23BCDBF700C23BBF /* NetworkError.swift in Sources */,
 				6C50AE5623BCB59B0078AA34 /* CurrencySelectorResponse.swift in Sources */,
@@ -495,9 +525,11 @@
 				6CF02E3523BE379100878E37 /* CalculatorViewModel.swift in Sources */,
 				6C8EE19923BCDBF700C23BBF /* APIClient.swift in Sources */,
 				6CF02E3A23BE62CD00878E37 /* CurrencySelectorDestination.swift in Sources */,
+				6C68F58723C2062C000D6F51 /* TableView+Cell.swift in Sources */,
 				6C62493723BCEDFA00C5D0BC /* CurrencyTableCell.swift in Sources */,
 				6C50AE5923BCB6080078AA34 /* CurrencySelectorViewController.swift in Sources */,
 				6C8EE19F23BCDC0000C23BBF /* BundleExtension.swift in Sources */,
+				6C68F58023C14E36000D6F51 /* DropdownTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
