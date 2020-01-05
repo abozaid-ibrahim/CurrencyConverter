@@ -37,10 +37,6 @@ final class AppNavigator: Navigator {
     func push(_ dest: Destination) {
         AppNavigator.rootController.pushViewController(dest.controller(), animated: true)
     }
-//    func presentModally(_ dest: Destination) {
-//        AppNavigator.rootController.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>))
-//       }
-
 }
 
 enum NavigatorError: Error {

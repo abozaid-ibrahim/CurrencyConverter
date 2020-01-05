@@ -27,6 +27,7 @@
 		6C68F58423C15852000D6F51 /* DropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C68F58223C15852000D6F51 /* DropdownViewController.swift */; };
 		6C68F58523C15852000D6F51 /* DropdownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C68F58323C15852000D6F51 /* DropdownViewController.xib */; };
 		6C68F58723C2062C000D6F51 /* TableView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C68F58623C2062C000D6F51 /* TableView+Cell.swift */; };
+		6C68F58923C20928000D6F51 /* SelectorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C68F58823C20928000D6F51 /* SelectorViewModelTests.swift */; };
 		6C8EE19923BCDBF700C23BBF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560EC23BCD93E00270165 /* APIClient.swift */; };
 		6C8EE19A23BCDBF700C23BBF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560F023BCD93E00270165 /* APIConstants.swift */; };
 		6C8EE19C23BCDBF700C23BBF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0560ED23BCD93E00270165 /* NetworkError.swift */; };
@@ -92,6 +93,7 @@
 		6C68F58223C15852000D6F51 /* DropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewController.swift; sourceTree = "<group>"; };
 		6C68F58323C15852000D6F51 /* DropdownViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownViewController.xib; sourceTree = "<group>"; };
 		6C68F58623C2062C000D6F51 /* TableView+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Cell.swift"; sourceTree = "<group>"; };
+		6C68F58823C20928000D6F51 /* SelectorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorViewModelTests.swift; sourceTree = "<group>"; };
 		6C8EE1A123BCDC6000C23BBF /* FibonacciCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCalculator.swift; sourceTree = "<group>"; };
 		6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciTests.swift; sourceTree = "<group>"; };
 		6CF02E3023BE35AF00878E37 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */,
 				6C50AE4423BBFFF70078AA34 /* AnagramsTests.swift */,
 				6C68F54523C0CFAB000D6F51 /* FreeLeaksModuelsTests.swift */,
+				6C68F58823C20928000D6F51 /* SelectorViewModelTests.swift */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				6C68F54623C0CFAC000D6F51 /* FreeLeaksModuelsTests.swift in Sources */,
 				6C8EE1A423BCDEC400C23BBF /* FibonacciTests.swift in Sources */,
 				6C50AE4523BBFFF70078AA34 /* AnagramsTests.swift in Sources */,
+				6C68F58923C20928000D6F51 /* SelectorViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

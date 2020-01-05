@@ -84,6 +84,8 @@ final class CurrencySelectorListViewModel: CurrencySelectorViewModel {
             let newValue = item.1
             newValues[item.key] = newValue / value
         }
+        newValues["EUR"] = 1 / value
+        newValues.removeValue(forKey: currency)
         publish(newValues)
     }
 

@@ -6,14 +6,7 @@
 //  Copyright © 2020 Abuzeid. All rights reserved.
 //
 
-import Foundation
-//class Solver{
-//    func test(input: [Float])->[Character]{
-//        let target = 12
-//        
-//        for item in input{
-//            if buffer + input
-//        }
-//        
-//    }
-//}
+//solution is
+// 3*((13)-9) = 12
+//should done by using DP, and trying every single char between the digits
+
