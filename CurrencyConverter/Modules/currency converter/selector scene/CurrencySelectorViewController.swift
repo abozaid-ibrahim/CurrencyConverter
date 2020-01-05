@@ -41,7 +41,7 @@ final class CurrencySelectorViewController: UIViewController {
 
     private func bindToViewModel() {
         viewModel.currencyValuesList
-            .bind(to: tableView.rx.items(cellIdentifier:String(describing: CurrencyTableCell.self), cellType: CurrencyTableCell.self)) { _, element, cell in
+            .bind(to: tableView.rx.items(cellIdentifier: String(describing: CurrencyTableCell.self), cellType: CurrencyTableCell.self)) { _, element, cell in
 
                 cell.setData(currency: element.key, value: element.value)
             }
