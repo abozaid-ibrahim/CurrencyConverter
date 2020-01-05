@@ -103,7 +103,7 @@ final class CurrencySelectorListViewModel: CurrencySelectorViewModel {
     }
 
     private func publish(_ dic: [String: Float]) {
-        let valu = dic.mapValues { String(Float(round(100 * $0) / 100)) }
-        _currencyValuesList.onNext(valu)
+        let values = dic.mapValues { String(Float(round(100 * $0) / 100)) }
+        _currencyValuesList.onNext(values)
     }
 }

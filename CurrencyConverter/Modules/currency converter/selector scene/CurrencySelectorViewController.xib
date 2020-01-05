@@ -24,20 +24,20 @@
                     <rect key="frame" x="137" y="56" width="140" height="44"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPJ-y4-weN">
-                            <rect key="frame" x="52" y="12" width="76" height="20.5"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <rect key="frame" x="56" y="10" width="72" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="Pe6-3l-v9f">
-                            <rect key="frame" x="12" y="6" width="32" height="32"/>
+                            <rect key="frame" x="12" y="9" width="32" height="26"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="32" id="SYb-SI-MVL"/>
+                                <constraint firstAttribute="height" constant="26" id="SYb-SI-MVL"/>
                                 <constraint firstAttribute="width" constant="32" id="YIb-h4-Hlp"/>
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="0.50393375880281688" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="oPJ-y4-weN" firstAttribute="centerY" secondItem="4vO-ot-AOX" secondAttribute="centerY" id="3Lu-4S-QlV"/>
@@ -45,14 +45,14 @@
                         <constraint firstItem="Pe6-3l-v9f" firstAttribute="centerY" secondItem="4vO-ot-AOX" secondAttribute="centerY" id="Ps2-Jx-vkm"/>
                         <constraint firstAttribute="height" constant="44" id="WmK-k0-bkD"/>
                         <constraint firstAttribute="width" constant="140" id="b7y-oO-BAt"/>
-                        <constraint firstItem="oPJ-y4-weN" firstAttribute="leading" secondItem="Pe6-3l-v9f" secondAttribute="trailing" constant="8" id="bwf-2q-NhH"/>
+                        <constraint firstItem="oPJ-y4-weN" firstAttribute="leading" secondItem="Pe6-3l-v9f" secondAttribute="trailing" constant="12" id="bwf-2q-NhH"/>
                         <constraint firstItem="Pe6-3l-v9f" firstAttribute="leading" secondItem="4vO-ot-AOX" secondAttribute="leading" constant="12" id="y9e-bN-WlQ"/>
                     </constraints>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="LVt-jz-5EO" appends="YES" id="bYQ-6K-sFh"/>
                     </connections>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xyi-dN-JtN">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xyi-dN-JtN">
                     <rect key="frame" x="0.0" y="112" width="414" height="750"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
