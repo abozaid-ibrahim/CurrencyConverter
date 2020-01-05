@@ -68,3 +68,4 @@ This is to group every component's extension / reusable functions / wrappers of 
 
  * add staging,production environment
  * reach 100% code coverage
+ * handle the error
