@@ -9,7 +9,6 @@
 import UIKit
 
 final class CurrencyTableCell: UITableViewCell {
-    static let id = "CurrencyTableCell"
     @IBOutlet private var currencyLbl: UILabel!
     @IBOutlet private var valueLbl: UILabel!
 

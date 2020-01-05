@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrencySelectorViewController" customModule="CurrencyConverter" customModuleProvider="target">
             <connections>
+                <outlet property="baseLbl" destination="oPJ-y4-weN" id="8ZB-kS-e1O"/>
                 <outlet property="tableView" destination="xyi-dN-JtN" id="r4Q-sA-7eg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,14 +20,48 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vO-ot-AOX">
+                    <rect key="frame" x="137" y="56" width="140" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPJ-y4-weN">
+                            <rect key="frame" x="52" y="12" width="76" height="20.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="Pe6-3l-v9f">
+                            <rect key="frame" x="12" y="6" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="SYb-SI-MVL"/>
+                                <constraint firstAttribute="width" constant="32" id="YIb-h4-Hlp"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="oPJ-y4-weN" firstAttribute="centerY" secondItem="4vO-ot-AOX" secondAttribute="centerY" id="3Lu-4S-QlV"/>
+                        <constraint firstAttribute="trailing" secondItem="oPJ-y4-weN" secondAttribute="trailing" constant="12" id="Dss-yy-JRv"/>
+                        <constraint firstItem="Pe6-3l-v9f" firstAttribute="centerY" secondItem="4vO-ot-AOX" secondAttribute="centerY" id="Ps2-Jx-vkm"/>
+                        <constraint firstAttribute="height" constant="44" id="WmK-k0-bkD"/>
+                        <constraint firstAttribute="width" constant="140" id="b7y-oO-BAt"/>
+                        <constraint firstItem="oPJ-y4-weN" firstAttribute="leading" secondItem="Pe6-3l-v9f" secondAttribute="trailing" constant="8" id="bwf-2q-NhH"/>
+                        <constraint firstItem="Pe6-3l-v9f" firstAttribute="leading" secondItem="4vO-ot-AOX" secondAttribute="leading" constant="12" id="y9e-bN-WlQ"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="LVt-jz-5EO" appends="YES" id="bYQ-6K-sFh"/>
+                    </connections>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xyi-dN-JtN">
-                    <rect key="frame" x="0.0" y="12" width="414" height="850"/>
+                    <rect key="frame" x="0.0" y="112" width="414" height="750"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="xyi-dN-JtN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="DHd-f2-yUo"/>
+                <constraint firstItem="4vO-ot-AOX" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4VE-RX-zdo"/>
+                <constraint firstItem="xyi-dN-JtN" firstAttribute="top" secondItem="4vO-ot-AOX" secondAttribute="bottom" constant="12" id="HoB-qZ-9kF"/>
+                <constraint firstItem="4vO-ot-AOX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="R34-oK-s7m"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xyi-dN-JtN" secondAttribute="trailing" id="Tf4-Fx-9eU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xyi-dN-JtN" secondAttribute="bottom" id="Yg7-ru-o9N"/>
                 <constraint firstItem="xyi-dN-JtN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ypf-uh-bZq"/>
@@ -34,5 +69,13 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
+        <tapGestureRecognizer id="LVt-jz-5EO" userLabel="baseViewTap">
+            <connections>
+                <action selector="onBaseCurrencyTapped:" destination="-1" id="6pw-xF-qTl"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="menu" width="64" height="64"/>
+    </resources>
 </document>

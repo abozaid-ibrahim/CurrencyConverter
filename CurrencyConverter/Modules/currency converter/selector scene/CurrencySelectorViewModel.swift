@@ -10,23 +10,30 @@ import Foundation
 import RxSwift
 protocol CurrencySelectorViewModel {
     var showProgress: Observable<Bool> { get }
-    var currenciesList: Observable<CurrencyModel> { get }
+    var currencyValuesList: Observable<CurrencyModel> { get }
+    var currenciesList: Observable<[String]> { get }
     var error: Observable<Error> { get }
     func loadCurrencyOf(cur: String)
     func itemSelected(of c: (String, String))
 }
 
 typealias CurrencyModel = [String: String]
-struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
+final class CurrencySelectorListViewModel: CurrencySelectorViewModel {
+    var currenciesList: Observable<[String]> {
+        return _currencyValuesList.map { $0.map { $0.key } }
+    }
+
     private let apiClient: ApiClient
 
     // MARK: private state
 
     private let disposeBag = DisposeBag()
-    private let _categories = PublishSubject<CurrencyModel>()
+    private let _currencyValuesList = PublishSubject<CurrencyModel>()
     private let _showProgress = PublishSubject<Bool>()
     private let _error = PublishSubject<Error>()
-    private let base = "EUR"
+    private var base = ""
+
+    private var currencyValuesCach: [String: Float] = [:]
 
     // MARK: Observers
 
@@ -34,8 +41,8 @@ struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
         return _showProgress.asObservable()
     }
 
-    var currenciesList: Observable<CurrencyModel> {
-        return _categories.asObservable()
+    var currencyValuesList: Observable<CurrencyModel> {
+        return _currencyValuesList.asObservable()
     }
 
     var error: Observable<Error> {
@@ -51,12 +58,17 @@ struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
     }
 
     func loadCurrencyOf(cur: String) {
+        base = cur
+        guard currencyValuesCach.isEmpty else {
+            calculateCurrency(for: cur)
+            return
+        }
         _showProgress.onNext(true)
         let api = CurrencySelectorApi.latest(currency: cur)
         apiClient.getData(of: api) { result in
             switch result {
             case let .success(data):
-                self.updateUI(with: data)
+                self.parseData(with: data)
             case let .failure(error):
                 log(.error, error.localizedDescription)
                 self._error.onNext(error)
@@ -65,17 +77,34 @@ struct CurrencySelectorListViewModel: CurrencySelectorViewModel {
         }
     }
 
-    private func updateUI(with data: Data) {
+    private func calculateCurrency(for currency: String) {
+        guard let value = currencyValuesCach[currency] else { return }
+        var newValues: [String: Float] = [:]
+        for item in currencyValuesCach {
+            let newValue = item.1
+            newValues[item.key] = newValue / value
+        }
+        newValues["EUR"] = 1 / value
+        newValues.removeValue(forKey: currency)
+        publish(newValues)
+    }
+
+    private func parseData(with data: Data) {
         log(.info, String(data: data, encoding: .utf8))
         do {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let model = try decoder.decode(CurrencySelectorResponse.self, from: data)
-            let valu = model.rates.mapValues { String(Float(round(100 * $0) / 100)) }
-            _categories.onNext(valu)
+            currencyValuesCach = model.rates
+            publish(model.rates)
         } catch {
             log(.error, error)
             _error.onNext(NetworkFailure.failedToParseData)
         }
+    }
+
+    private func publish(_ dic: [String: Float]) {
+        let valu = dic.mapValues { String(Float(round(100 * $0) / 100)) }
+        _currencyValuesList.onNext(valu)
     }
 }
