@@ -278,10 +278,8 @@
 		6C68F54723C0D112000D6F51 /* modules */ = {
 			isa = PBXGroup;
 			children = (
-				6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */,
-				6C50AE4423BBFFF70078AA34 /* AnagramsTests.swift */,
-				6C68F54523C0CFAB000D6F51 /* FreeLeaksModuelsTests.swift */,
-				6C68F58823C20928000D6F51 /* SelectorViewModelTests.swift */,
+				6C68F58B23C2174A000D6F51 /* problems */,
+				6C68F58A23C21738000D6F51 /* currency converter */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -295,6 +293,24 @@
 				6C68F58323C15852000D6F51 /* DropdownViewController.xib */,
 			);
 			path = "dropdown menu";
+			sourceTree = "<group>";
+		};
+		6C68F58A23C21738000D6F51 /* currency converter */ = {
+			isa = PBXGroup;
+			children = (
+				6C68F54523C0CFAB000D6F51 /* FreeLeaksModuelsTests.swift */,
+				6C68F58823C20928000D6F51 /* SelectorViewModelTests.swift */,
+			);
+			path = "currency converter";
+			sourceTree = "<group>";
+		};
+		6C68F58B23C2174A000D6F51 /* problems */ = {
+			isa = PBXGroup;
+			children = (
+				6C8EE1A323BCDEC400C23BBF /* FibonacciTests.swift */,
+				6C50AE4423BBFFF70078AA34 /* AnagramsTests.swift */,
+			);
+			path = problems;
 			sourceTree = "<group>";
 		};
 		6CF02E3623BE623100878E37 /* navigation */ = {

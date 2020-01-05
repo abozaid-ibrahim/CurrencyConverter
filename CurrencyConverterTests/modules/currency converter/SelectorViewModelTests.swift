@@ -19,7 +19,7 @@ final class SelectorViewModelTests: QuickSpec {
             var schedular: TestScheduler!
             var currenciesObserver: TestableObserver<CurrencyModel>!
             var disposeBag = DisposeBag()
-            var viewModel: CurrencySelectorListViewModel!
+            var viewModel: CurrencySelectorViewModel!
 
             beforeEach {
                 schedular = TestScheduler(initialClock: 0)
